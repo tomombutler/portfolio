@@ -3,9 +3,7 @@
 {% block content %}			    
 <article class="project">
     Hello my name is mr project
-	<h2 class="project__heading">{{ page.title }}</h2>
-    
-    <div class="blog-page__content">
+	<h2 class="project__heading">{{ header.introduction }}</h2>
 
         <ul class="project__meta-list">
             {% if page.taxonomy.tag %}
@@ -35,7 +33,18 @@
         </ul>
 
         <div class="project__content">
-            {{ page.content }}
+            {% for content_block in header.content_blocks %}
+                {% for file in content_block.single_image_row %}
+                    <div class="pure-u-1-1 grid-item project-item project-item--image" style="{{ content_block.background_colour }}">
+                        <img src="{{ file.path }}">
+                    </div>
+                {% endfor %}           
+                {% if content_block.text_row %}
+                    <div class="pure-u-2-3 grid-item project-item">                    
+                        <p>{{ content_block.text_row }}</p>        
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
 
         <p class="prev-next">

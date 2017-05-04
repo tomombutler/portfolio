@@ -25,4 +25,53 @@ form:
               accept:
                 - image/*
 
+            content:
+              type: ignore
+
+            uploads:
+              type: ignore            
+
+            header.introduction:
+              type: markdown
+              label: Introduction
+              validate:
+                type: textarea
+
+            header.project_year:
+              type: text
+              style: vertical
+              label: Project year
+
+            header.project_client:
+              type: text
+              style: vertical
+              label: Project client
+
+            header.content_blocks:
+              name: content blocks
+              type: list
+              style: vertical
+              label: Content blocks
+              btnLabel: Add content block
+
+              fields:
+                .background_colour:
+                  type: colorpicker
+                  label: Choose a background colour
+
+                .single_image_row:
+                  type: file
+                  label: Single image row — image
+                  destination: 'user/pages/images'
+                  multiple: false
+                  filesize: 5
+                  accept:
+                    - image/*
+                
+                .text_row:
+                  type: markdown
+                  label: Text box
+                  validate:
+                    type: textarea
+
 
