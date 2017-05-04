@@ -1,0 +1,18 @@
+<header class="site-header">
+    <div class="wrapper">
+        <div class="pure-g">
+            <div class="pure-u-1-4">
+                <a class="site-logo left" href="{{ base_url == '' ? '/' : base_url }}">
+                    Welsh <br>Homestead
+                </a>
+            </div>
+            <div class="pure-u-3-4">
+                {% block header_navigation %}
+                <nav class="site-nav">
+                    {% include 'partials/navigation.html.twig' %}
+                </nav>
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</header>

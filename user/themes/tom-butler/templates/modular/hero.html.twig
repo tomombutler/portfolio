@@ -1,0 +1,23 @@
+<section class="section hero">
+    {% for file in header.custom_file %}
+    <div class="hero__image">
+        <img src="{{ file.path }}">
+    </div>
+    {% endfor %}
+
+    <div class="pure-g grid-wrapper u-flex-center">
+
+        <div class="pure-u-2-3 grid-item">
+            <div class="hero__content">
+                {% if header.heading %}
+                    <h1>{{ header.heading }}</h1>
+                {% endif %}
+                <p>{{ content }}</p>
+                {% if header.link %}
+                    <a href="#" class="btn btn--secondary">{{ header.link }}</a>
+                {% endif %}
+            </div>
+        </div>
+    
+    </div>  
+</section>

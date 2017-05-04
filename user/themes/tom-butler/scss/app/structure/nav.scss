@@ -1,0 +1,13 @@
+.site-nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: $font-family-base;
+    column-count: 3;
+}
+    
+    .site-nav__link {
+        color: $text;
+        margin-bottom: 1rem;
+        padding-left: 0.5rem;
+    }

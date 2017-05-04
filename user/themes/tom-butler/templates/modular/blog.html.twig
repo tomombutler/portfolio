@@ -1,0 +1,16 @@
+<section class="section section--home">
+    <div class="heading heading--linked">
+        {% if header.heading %}
+            <h1>{{ header.heading }}</h1>
+        {% endif %}
+        <a href="#">View all posts</a>
+    </div>
+
+    <div class="blog-content-list grid-wrapper blog-grid pure-g">
+        {% for child in page.find('/recipes-and-ramblings').children %}
+            <div class="pure-u-1-3">
+                {% include 'partials/blog_item.html.twig' with {'blog':page, 'page':child, 'truncate':true, 'size':10 } %}
+            </div>
+        {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,45 @@
+.card-list {
+    margin-bottom: 7rem;
+    padding: 0;
+}
+
+.card {
+    margin-bottom: 2rem;
+}
+
+.card--tweet {
+    padding: 2rem;
+    background: $brand-color1-light;
+}
+
+    .card--tweet__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card--tweet__time {
+        font-size: $font-size-small;
+        color: $black;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .card--tweet__icon {
+        max-width: 28px;
+    }
+
+// card--tweet alternate colours
+.card-list .grid-item {
+    &:nth-of-type(4) {
+        .card--tweet {
+            background: $brand-color2-light;
+        }
+    }
+
+    &:nth-of-type(6) {
+        .card--tweet {
+            background: $grey;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<section class="modular-section">
+    <div class="pure-g grid-wrapper u-flex-center">
+        <div class="pure-u-5-6 grid-item">
+
+            {% for service in page.header.services %}
+
+                <div class="service-link">
+                    {% for file in service.custom_file %}
+                    <div class="service-link__image">
+                        <img src="{{ file.path }}">
+                    </div>
+                    {% endfor %}
+                    
+                    <div class="service-link__content">
+                        {% if service.heading %}
+                        <h2>{{ service.heading }}</h2>
+                        {% endif %}
+                        {% if service.text %}
+                        <p>{{ service.text }}</p>
+                        {% endif %}
+                        {% if service.link %}
+                        <a href="#" class="btn btn--primary">{{ service.link }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+
+    </div>
+</section>

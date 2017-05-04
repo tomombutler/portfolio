@@ -1,0 +1,28 @@
+title: Project
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Project
+
+          fields:
+
+            header.thumbnail:
+              type: file
+              label: Project thumbnail image
+              destination: 'user/pages/images'
+              multiple: false
+              filesize: 5
+              accept:
+                - image/*
+
+

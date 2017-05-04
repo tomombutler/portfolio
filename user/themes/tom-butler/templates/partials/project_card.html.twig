@@ -1,0 +1,17 @@
+<a href="{{ page.url }}" class="project-card">
+
+    {% for file in header.thumbnail %}
+    <span class="project-card__image">
+        <img src="{{ file.path }}">
+    </span>
+    {% endfor %}
+
+    <span class="project-card__content">
+        <h4 class="project-card__heading">{{ page.title }}</h4>
+        <ul class="project__tag-list">
+            {% for tag in page.taxonomy.tag %}
+            <li class="project__tag">{{ tag }}</li>
+            {% endfor %}
+        </ul>
+    </span>
+</a>

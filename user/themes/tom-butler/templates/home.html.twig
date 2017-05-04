@@ -1,0 +1,24 @@
+{% embed 'partials/base.html.twig' %}
+
+	{% set collection = page.collection() %}
+
+	{% block content %}
+
+		<div class="pure-g u-flex-center">
+			<div class="pure-u-3-4">
+				<h1>{{ header.heading }}</h1>
+			</div>
+		</div> 
+
+		<div class="blog-content-list grid-wrapper blog-grid pure-g">
+
+            {% for child in page.find('/projects').children %}
+                <div class="pure-u-1-2">
+                    {% include 'partials/project_card.html.twig' with {'blog':page, 'page':child} %}
+                </div>
+            {% endfor %}
+
+		</div>
+	{% endblock %}
+
+{% endembed %} 

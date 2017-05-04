@@ -1,0 +1,42 @@
+.service-link {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    font-family: $font-family-base;
+    margin-bottom: 7.5rem;
+
+    &:nth-of-type(even) {
+        .service-link__image {
+            order: 2;
+            padding: 0 0 0 1rem;
+        }
+        .service-link__content {
+            order: 1;
+            padding: 0 1rem 0 0;
+            margin-right: -10%;
+        }
+    }
+
+    &:nth-of-type(odd) {
+        .btn {
+            background: $brand-color2-light;
+        }
+    }
+}
+
+    .service-link__image {
+        width: 60%;
+        padding-right: 1rem;
+    }
+
+    .service-link__content {
+        width: 50%;
+        padding-left: 1rem;
+        margin-left: -10%;
+        margin-top: 2rem;
+        z-index: 1;
+
+        p {
+            margin-bottom: 2.5rem;
+        }
+    }

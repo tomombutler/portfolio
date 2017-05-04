@@ -1,0 +1,102 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3342538, 2017-02-09T05:15:44-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: BergenText-Bold by Mindburger Studio
+ * URL: http://www.myfonts.com/fonts/mindburger-studio/bergen-text/bold/
+ * 
+ * Webfont: BergenText-Italic by Mindburger Studio
+ * URL: http://www.myfonts.com/fonts/mindburger-studio/bergen-text/italic/
+ * 
+ * Webfont: BergenText-Regular by Mindburger Studio
+ * URL: http://www.myfonts.com/fonts/mindburger-studio/bergen-text/regular/
+ * 
+ * Webfont: BergenText-SemiBold by Mindburger Studio
+ * URL: http://www.myfonts.com/fonts/mindburger-studio/bergen-text/semi-bold/
+ * 
+ * Webfont: BergenText-BoldItalic by Mindburger Studio
+ * URL: http://www.myfonts.com/fonts/mindburger-studio/bergen-text/bold-italic/
+ * 
+ * Webfont: BergenText-SemiBoldItalic by Mindburger Studio
+ * URL: http://www.myfonts.com/fonts/mindburger-studio/bergen-text/semi-bold-italic/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3342538
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright (c) Milos Mitrovic, 2015. All rights reserved.
+ * 
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3300ca");
+
+  
+@font-face {font-family: 'BergenText-Bold';src: url('../fonts/3300CA_0_0.eot');src: url('../fonts/3300CA_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3300CA_0_0.woff2') format('woff2'),url('../fonts/3300CA_0_0.woff') format('woff'),url('../fonts/3300CA_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'BergenText-Italic';src: url('../fonts/3300CA_1_0.eot');src: url('../fonts/3300CA_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3300CA_1_0.woff2') format('woff2'),url('../fonts/3300CA_1_0.woff') format('woff'),url('../fonts/3300CA_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'BergenText-Regular';src: url('../fonts/3300CA_2_0.eot');src: url('../fonts/3300CA_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3300CA_2_0.woff2') format('woff2'),url('../fonts/3300CA_2_0.woff') format('woff'),url('../fonts/3300CA_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'BergenText-SemiBold';src: url('../fonts/3300CA_3_0.eot');src: url('../fonts/3300CA_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3300CA_3_0.woff2') format('woff2'),url('../fonts/3300CA_3_0.woff') format('woff'),url('../fonts/3300CA_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'BergenText-BoldItalic';src: url('../fonts/3300CA_4_0.eot');src: url('../fonts/3300CA_4_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3300CA_4_0.woff2') format('woff2'),url('../fonts/3300CA_4_0.woff') format('woff'),url('../fonts/3300CA_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'BergenText-SemiBoldItalic';src: url('../fonts/3300CA_5_0.eot');src: url('../fonts/3300CA_5_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3300CA_5_0.woff2') format('woff2'),url('../fonts/3300CA_5_0.woff') format('woff'),url('../fonts/3300CA_5_0.ttf') format('truetype');}
+
+// @font-face {font-family: 'lab-mono';src: url('../fonts/labmono-regular-web.eot');src: url('../fonts/labmono-regular-web.woff2') format('woff2'),url('../fonts/labmono-regular-web.woff') format('woff'),url('../fonts/labmono-regular-web.ttf') format('truetype');}
+
+body,
+html {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $text;
+    -webkit-font-smoothing: antialiased;
+}
+
+// --------------------------------------------------
+// Headings
+// --------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $font-family-base;
+    color: $black;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: $font-size-jumbo;
+    line-height: 1.3333;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: $font-size-large;
+    line-height: 3rem;
+}
+
+// --------------------------------------------------
+// Paragraph
+// --------------------------------------------------
+
+p {
+    font-family: $font-family-base;
+    line-height: 2;
+}

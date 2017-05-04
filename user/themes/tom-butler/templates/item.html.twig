@@ -1,0 +1,66 @@
+{% embed 'partials/base.html.twig' %}
+
+{% block content %}
+			    
+	<article class="blog-page">
+
+		{% set header_image = page.header.header_image|defined(true) %}
+		{% set header_image_width  = page.header.header_image_width|defined(1280) %}
+		{% set header_image_height = page.header.header_image_height|defined(720) %}
+		{% set header_image_file = page.header.header_image_file %}
+
+		<div class="blog-page__image">
+			{% if header_image %}
+				{% if header_image_file %}
+					{% set header_image_media = page.media.images[header_image_file] %}
+				{% else %}
+					{% set header_image_media = page.media.images|first %}
+				{% endif %}
+				{{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
+			{% endif %}
+		</div>
+		
+		<div class="pure-g grid-wrapper u-flex-center">
+			
+			<div class="pure-u-2-3 grid-item">
+
+				<div class="blog-page__content">
+
+					<span class="blog-page__date">
+						<time datetime="{{ page.date|date("c") }}">
+							{{ page.date|date("d.m.y") }}
+						</time>
+					</span>
+
+					<h4 class="blog-page__heading">{{ page.title }}</h4>
+
+					<div class="e-content">
+						{{ page.content }}
+					</div>
+
+					{% if page.taxonomy.tag %}
+					<span class="tags">
+						{% for tag in page.taxonomy.tag %}
+						<a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}" class="p-category">{{ tag }}</a>
+						{% endfor %}
+					</span>
+					{% endif %}
+
+					<p class="prev-next">
+						{% if not page.isFirst %}
+							<a class="button" href="{{ page.nextSibling.url }}">Next post</a>
+						{% endif %}
+
+						{% if not page.isLast %}
+							<a class="button" href="{{ page.prevSibling.url }}">Previous post</a>
+						{% endif %}
+					</p>
+				</div>
+
+			</div>
+
+		</div>
+	</article>
+{% endblock %}
+
+{% endembed %}

@@ -1,0 +1,54 @@
+{% embed 'partials/base.html.twig' %}
+
+{% block content %}			    
+<article class="project">
+    Hello my name is mr project
+	<h2 class="project__heading">{{ page.title }}</h2>
+    
+    <div class="blog-page__content">
+
+        <ul class="project__meta-list">
+            {% if page.taxonomy.tag %}
+            <li class="project__meta-item">
+                <h4>Services</h4>
+                <ul class="project__tag-list">
+                    {% for tag in page.taxonomy.tag %}
+                    <li class="project__tag">{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endif %}
+
+            {% if header.project_year %}
+            <li class="project__meta-item">
+                <h4>Year</h4>
+                <p>{{ header.project_year }}</p>
+            </li>
+            {% endif %}
+
+            {% if header.project_client %}
+            <li class="project__meta-item">
+                <h4>Client</h4>
+                <p>{{ header.project_client }}</p>
+            </li>
+            {% endif %}
+        </ul>
+
+        <div class="project__content">
+            {{ page.content }}
+        </div>
+
+        <p class="prev-next">
+            {% if not page.isFirst %}
+                <a class="button" href="{{ page.nextSibling.url }}">Next post</a>
+            {% endif %}
+
+            {% if not page.isLast %}
+                <a class="button" href="{{ page.prevSibling.url }}">Previous post</a>
+            {% endif %}
+        </p>
+    </div>
+</article>
+{% endblock %}
+
+{% endembed %}

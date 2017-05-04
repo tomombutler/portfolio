@@ -1,0 +1,63 @@
+.form {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    font-family: $font-family-base;
+    margin: 0 -1rem;
+}
+
+    .form__group {
+        display: block;
+        width: 100%;
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+    }
+
+        .form__group--half {
+            width: 50%;
+        }
+
+    .form__label {
+        width: 100%;
+        color: $brand-color1;
+    }
+
+    .form__input {
+        height: 2.5rem;
+        width: 100%;
+        background: transparent;
+        border: none;
+        background-image: linear-gradient(to right, #333 30%, rgba(255, 255, 255, 0) 15%);
+        background-position: bottom;
+        background-size: 4px 1px;
+        background-repeat: repeat-x;
+
+        &:focus {
+            outline: none;
+            background-image: linear-gradient(to right, $brand-color1 0%, $brand-color1 100%); 
+        }
+    }
+
+    .form__textarea {
+        width: 100%;
+        padding: 0 0 1rem 0;
+        background: transparent;
+        border: none;
+        background-image: linear-gradient(to right, #333 30%, rgba(255, 255, 255, 0) 15%);
+        background-position: bottom;
+        background-size: 4px 1px;
+        background-repeat: repeat-x;
+
+        &:focus {
+            outline: none;
+            background-image: linear-gradient(to right, $brand-color1 0%, $brand-color1 100%); 
+        }
+    }
+
+    .form__submit {
+        width: auto;
+    }
+
+.contact-form {
+    margin-bottom: 7.5rem;
+}

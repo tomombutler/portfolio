@@ -1,0 +1,54 @@
+title: Hero
+
+rules:
+  slug:
+    pattern: '[a-zA-Zа-яA-Я0-9_\-]+' 
+    min: 1
+    max: 200
+
+form:
+  validation: loose
+
+  fields:
+
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Homepage hero
+
+          fields:
+            header.title:
+              type: text
+              autofocus: true
+              style: vertical
+              label: PLUGIN_ADMIN.TITLE
+
+            custom_file:
+              style: vertical
+              type: file
+              label: Hero image
+              destination: 'user/pages/images'
+              multiple: false
+              filesize: 5
+              accept:
+                - image/*
+
+            header.heading:
+                type: text
+                style: vertical
+                label: Heading
+
+            content:
+                type: markdown
+                label: Introduction
+                validate:
+                  type: textarea
+
+            header.link:
+              type: text
+              style: vertical
+              label: Link

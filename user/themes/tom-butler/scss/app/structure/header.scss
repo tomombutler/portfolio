@@ -1,0 +1,12 @@
+.site-header {
+    display: flex;
+    align-items: center;
+    background: $white;
+    height: 7.5rem;
+    width: 100%;
+    font-family: $font-family-base;
+}
+
+.site-header .wrapper {
+    width: 100%; 
+}

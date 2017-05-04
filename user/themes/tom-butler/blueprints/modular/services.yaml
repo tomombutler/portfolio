@@ -1,0 +1,53 @@
+title: Services
+
+rules:
+  slug:
+    pattern: '[a-zA-Zа-яA-Я0-9_\-]+' 
+    min: 1
+    max: 200
+
+form:
+  validation: loose
+
+  fields:
+
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Homepage services
+
+          fields:
+            header.title:
+              type: text
+              autofocus: true
+              style: vertical
+              label: PLUGIN_ADMIN.TITLE
+
+            header.services: 
+              name: services
+              type: list
+              style: vertical
+              label: Services
+
+              fields:
+                .heading:
+                  type: text
+                  label: Heading
+                .text:
+                  type: text
+                  label: Text
+                .link:
+                  type: text
+                  label: Link
+                .custom_file:
+                  type: file
+                  label: Service image
+                  destination: 'user/pages/images'
+                  multiple: false
+                  filesize: 5
+                  accept:
+                    - image/*

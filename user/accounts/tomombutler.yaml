@@ -1,0 +1,11 @@
+email: hello@tombutler.me
+fullname: 'Tom Butler'
+title: Admin
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$oTk0uvzKT9w1Sr3VMjok0OhrOOnwzj29Mz4OBurn1uWkS7C2J4He6

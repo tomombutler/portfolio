@@ -1,0 +1,22 @@
+title: About
+@extends:
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          title: Home
+
+          fields:
+            header.heading:
+              type: text
+              style: vertical
+              label: Heading
+          
+            

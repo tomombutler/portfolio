@@ -1,0 +1,94 @@
+title: About
+@extends:
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          title: About us
+
+          fields:
+            header.title:
+              type: text
+              autofocus: true
+              style: vertical
+              label: PLUGIN_ADMIN.TITLE
+
+            content:
+              type: ignore
+
+            uploads:
+              type: ignore
+            
+            header.custom_file:
+              style: vertical
+              type: file
+              label: Hero image
+              destination: 'user/pages/images'
+              multiple: false
+              filesize: 5
+              accept:
+                - image/*
+              
+            header.heading:
+              type: text
+              style: vertical
+              label: Heading
+
+            header.introduction:
+              type: markdown
+              label: Introduction
+              validate:
+                type: textarea
+
+            header.content_blocks:
+              name: content blocks
+              type: list
+              style: vertical
+              label: Content blocks
+              btnLabel: Add content block
+
+              fields:
+                .single_image_row:
+                  type: file
+                  label: Single image row — image
+                  destination: 'user/pages/images'
+                  multiple: false
+                  filesize: 5
+                  accept:
+                    - image/*
+
+                .double_image_row_01:
+                  type: file
+                  label: Double image row — image 1
+                  destination: 'user/pages/images'
+                  multiple: false
+                  filesize: 5
+                  accept:
+                    - image/*
+
+                .double_image_row_02:
+                  type: file
+                  label: Double image row — image 2
+                  destination: 'user/pages/images'
+                  multiple: false
+                  filesize: 5
+                  accept:
+                    - image/*
+                
+                .text_row:
+                  type: markdown
+                  label: Text box
+                  validate:
+                    type: textarea
+
+        options:
+          type: ignore
+          
+            

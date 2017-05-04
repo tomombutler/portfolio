@@ -1,0 +1,35 @@
+<div class="blog-item">
+
+    {% set header_image = page.header.header_image|defined(true) %}
+    {% set header_image_width  = page.header.header_image_width|defined(1280) %}
+    {% set header_image_height = page.header.header_image_height|defined(720) %}
+    {% set header_image_file = page.header.header_image_file %}
+
+    <div class="blog-item__image">
+        {% if header_image %}
+            {% if header_image_file %}
+                {% set header_image_media = page.media.images[header_image_file] %}
+            {% else %}
+                {% set header_image_media = page.media.images|first %}
+            {% endif %}
+            {{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
+        {% endif %}
+    </div>
+
+    <div class="blog-item__content">
+
+        <span class="blog-item__date">
+            <time class="dt-published" datetime="{{ page.date|date("c") }}">
+                {{ page.date|date("d.m.y") }}
+            </time>
+        </span>
+
+        <h4 class="blog-item__heading"><a href="{{ page.url }}" class="u-url">{{ page.title }}</a></h4>
+
+        <div class="p-summary e-content">
+            {{ page.summary|truncate(180) }}
+            <p><a href="{{ page.url }}">{{ 'View post'|t }}</a></p>
+        </div>
+
+    </div>
+</div>
