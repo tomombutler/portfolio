@@ -1,23 +1,29 @@
-{% embed 'partials/base.html.twig' %}
+{% embed 'partials/base.html.twig' %} 
 
 	{% set collection = page.collection() %}
 
 	{% block content %}
-
-		<div class="pure-g u-flex-center">
-			<div class="pure-u-3-4">
-				<p class="paragraph-jumbo">{{ header.heading }}</p>
+		<section class="intro">
+			<div class="pure-g grid-wrapper">
+				{% if header.heading %}
+				<div class="pure-u-3-4 grid-item">
+					<p class="paragraph-jumbo">{{ header.heading }}</p>
+				</div>
+				{% endif %}
 			</div>
-		</div> 
+		</section>
 
-		<div class="blog-content-list grid-wrapper blog-grid pure-g">
+		<div class="section section--spaced">
+			<div class="grid-wrapper pure-g u-flex-center">
 
-            {% for child in page.find('/projects').children %}
-                <div class="pure-u-1-2">
-                    {% include 'partials/project_card.html.twig' with {'blog':page, 'page':child} %}
-                </div>
-            {% endfor %}
-
+				<div class="pure-u-5-6">
+				{% for child in page.find('/projects').children %}
+					<div class="pure-u-1-2 grid-item">
+						{% include 'partials/project_card.html.twig' with {'blog':page, 'page':child} %}
+					</div>
+				{% endfor %}
+				</div>
+			</div>
 		</div>
 	{% endblock %}
 

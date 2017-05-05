@@ -82,7 +82,7 @@ h5 {
 }
 
 h1 {
-    font-size: $font-size-jumbo;
+    font-size: $font-size-large;
     line-height: 1.3333;
     margin-bottom: 1rem;
 }
@@ -99,4 +99,10 @@ h2 {
 p {
     font-family: $font-family-base;
     line-height: 2;
+}
+
+.paragraph-jumbo {
+    font-size: $font-size-jumbo;
+    line-height: 1.3333;
+    margin-bottom: 0;
 }

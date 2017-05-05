@@ -1,0 +1,26 @@
+{
+  "name": "tombutler-portfolio",
+  "version": "0.0.0",
+  "description": "The portfolio for designer, Tom Butler",
+  "author": "Tom Butler <hello@tombutler.me>",
+  "contributors": [
+    {
+      "name": "Tom Butler",
+      "email": "hello@tombutler.me"
+    }
+  ],
+  "analyze": true,
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9",
+    "gulp-sass": "^2.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-autoprefixer": "^3.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-rename": "^1.2",
+    "gulp-uglify": "^1.4",
+    "gulp-sourcemaps": "^1.5",
+    "run-sequence": "^1.1",
+    "gulp-notify": "^2.2"   
+  }
+}
