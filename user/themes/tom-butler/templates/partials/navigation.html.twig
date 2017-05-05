@@ -1,11 +1,13 @@
 <ul class="site-nav__list">
-    {% for page in pages.children.visible %}
+    {% if not page.home %}
+        {% for page in pages.children.visible %}
         {% set current_page = (page.active or page.activeChild) ? 'selected' : '' %}
         <li class="site-nav__item {{ current_page }}">
             <a class="site-nav__link" href="{{ page.url }}">
                 {{ page.menu }}
             </a>
         </li>
-    {% endfor %}
+        {% endfor %}
+    {% endif %}
 </ul>
 
