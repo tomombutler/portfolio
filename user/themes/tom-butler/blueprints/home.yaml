@@ -18,5 +18,11 @@ form:
               type: text
               style: vertical
               label: Heading
+
+            content: 
+              type: ignore
+
+            uploads:
+              type: ignore
           
             

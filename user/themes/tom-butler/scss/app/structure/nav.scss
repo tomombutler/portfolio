@@ -14,11 +14,9 @@
     .site-nav__link {
         color: $text;
         margin-bottom: 1rem;
-        margin-left: 1.5rem;
-        font-size: 14px;
+        margin-left: 2rem;
+        font-size: $font-size-base;
         color: $grey;
-        letter-spacing: 2px;
-        text-transform: uppercase;
         transition: color 0.2s ease;
 
         &:hover,

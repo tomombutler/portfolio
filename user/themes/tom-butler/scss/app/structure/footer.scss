@@ -1,4 +1,22 @@
 .site-footer {
-    background: $grey;
-    padding: 7rem 0 3.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    background: $black;
 }
+
+    .site-footer__inner {
+        width: 66.66666667%;
+        margin-left: 8.333333333%;
+
+        p {
+            line-height: 1;
+            color: $grey-dark;
+        }
+    }
+
+    .site-footer__link {
+        font-size: $font-size-extra-large;
+        color: $white;
+    }
