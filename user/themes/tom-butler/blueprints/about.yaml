@@ -87,8 +87,3 @@ form:
                   label: Text box
                   validate:
                     type: textarea
-
-        options:
-          type: ignore
-          
-            

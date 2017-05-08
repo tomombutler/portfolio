@@ -1,5 +1,6 @@
 ---
-title: 'Recipes & Ramblings'
+title: Blog
+published: false
 content:
     items: '@self.children'
     limit: 10
