@@ -1,7 +1,9 @@
 <a href="{{ page.url }}" class="project-card">
 
     {% for file in page.header.thumbnail %}
-    <img class="project-card__image" src="{{ file.path }}">
+    <span class="project-card__image">
+        <img src="{{ file.path }}">
+    </span>
     {% endfor %}
 
     <span class="project-card__content">

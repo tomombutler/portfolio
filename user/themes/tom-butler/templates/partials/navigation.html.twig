@@ -1,6 +1,6 @@
 <ul class="site-nav__list">
     {% for page in pages.children.visible %}
-        {% if not page.home or page.projects %}
+        {% if not page.home.projects %}
         {% set current_page = (page.active or page.activeChild) ? 'selected' : '' %}
         <li class="site-nav__item {{ current_page }}">
             <a class="site-nav__link" href="{{ page.url }}">

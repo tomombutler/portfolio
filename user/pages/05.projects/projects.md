@@ -1,5 +1,6 @@
 ---
 title: Projects
+menu: projects
 content:
     items: '@self.children'
     order:

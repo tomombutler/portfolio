@@ -2,49 +2,54 @@
 
 {% block content %}			    
 <article class="project">
-	<h2 class="project__heading">{{ header.introduction }}</h2>
 
-        <ul class="project__meta-list">
-            {% if page.taxonomy.tag %}
-            <li class="project__meta-item">
-                <h4>Services</h4>
-                <ul class="project__tag-list">
-                    {% for tag in page.taxonomy.tag %}
-                    <li class="project__tag">{{ tag }}</li>
-                    {% endfor %}
-                </ul>
-            </li>
-            {% endif %}
+        <section class="project__intro">
+            <h2 class="project__heading">{{ header.introduction }}</h2>
 
-            {% if header.project_year %}
-            <li class="project__meta-item">
-                <h4>Year</h4>
-                <p>{{ header.project_year }}</p>
-            </li>
-            {% endif %}
-
-            {% if header.project_client %}
-            <li class="project__meta-item">
-                <h4>Client</h4>
-                <p>{{ header.project_client }}</p>
-            </li>
-            {% endif %}
-        </ul>
-
-        <div class="project__content">
-            {% for content_block in header.content_blocks %}
-                {% for file in content_block.single_image_row %}
-                <div class="pure-u-1-1 grid-item project-item project-item--image" style="background-color:{{ content_block.background_colour }}">
-                    <img src="../{{ file.path }}">
-                </div>
-                {% endfor %}           
-                {% if content_block.text_row %}
-                <div class="pure-u-2-3 grid-item project-item"> 
-                    <p>{{ content_block.text_row }}</p>        
-                </div>
+            <ul class="project__meta-list">
+                {% if page.taxonomy.tag %}
+                <li class="project__meta-item">
+                    <h4 class="project__meta-heading">Services</h4>
+                    <ul class="project__tag-list">
+                        {% for tag in page.taxonomy.tag %}
+                        <li class="project__tag">{{ tag }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
                 {% endif %}
-            {% endfor %}
-        </div>
+
+                {% if header.project_year %}
+                <li class="project__meta-item">
+                    <h4 class="project__meta-heading">Year</h4>
+                    <p>{{ header.project_year }}</p>
+                </li>
+                {% endif %}
+
+                {% if header.project_client %}
+                <li class="project__meta-item">
+                    <h4 class="project__meta-heading">Client</h4>
+                    <p>{{ header.project_client }}</p>
+                </li>
+                {% endif %}
+            </ul>
+        </section>
+
+        <section class="section--spaced">
+            <div class="project__content">
+                {% for content_block in header.content_blocks %}
+                    {% for file in content_block.single_image_row %}
+                    <div class="pure-u-1-1 grid-item project__item project__item--image" style="background-color:{{ content_block.background_colour }}">
+                        <img src="../{{ file.path }}">
+                    </div>
+                    {% endfor %}           
+                    {% if content_block.text_row %}
+                    <div class="pure-u-2-3 grid-item project__item"> 
+                        <p>{{ content_block.text_row }}</p>        
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
 
         <p class="prev-next">
             {% if not page.isFirst %}

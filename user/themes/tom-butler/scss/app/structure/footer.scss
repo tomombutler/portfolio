@@ -1,31 +1,4 @@
 .site-footer {
     background: $grey;
     padding: 7rem 0 3.25rem;
-    margin-bottom: 5rem;
-
-    .grid-wrapper:first-of-type {
-        margin-bottom: 2rem;
-    }
 }
-
-    .site-footer__list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        font-family: $font-family-base;
-        column-count: 2;
-
-        .site-nav__item {
-            margin-bottom: 0.5rem;
-        }
-
-    }
-
-    .site-footer__list--social {
-        column-count: 1;
-
-        .site-footer__item {
-            width: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-    }

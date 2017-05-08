@@ -1,8 +1,59 @@
-// project cards
 .project-card {
     display: flex;
     flex-direction: column;
+    
+    &:hover,
+    &:focus {
+        .project-card__image {
+            box-shadow: 0 20px 24px 0 rgba(17,17,17,0.25);
+            transform: translateY(-0.25rem);
+
+            &::before {
+                opacity: 1;
+                transition: opacity .25s ease;
+            }
+
+            &::after {
+                opacity: 1;
+                transition: opacity .25s ease;
+            }
+        }
+    }
 }
+
+    .project-card__image {
+        position: relative;
+        display: block;
+        box-shadow: none;
+        transform: translateY(0);
+        transition: transform .25s ease, box-shadow .25s ease;
+
+        img {
+            display: block;
+        }
+
+        &::after {
+            content: url('../assets/images/icon-plus.svg');
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            transition: opacity .25s ease;
+        }
+
+        &::before {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba($black, 0.95);
+            opacity: 0;
+            transition: opacity .25s ease;
+        }
+    }
 
     .project-card__heading {
         font-size: $font-size-large;
@@ -32,6 +83,67 @@
     }
 
 // project page
-.project-item--image {
-    padding: 5rem 0;
+.project__intro {
+    width: 66.66666667%;
+    margin: 13rem 0 0 8.333333333%;
+}
+
+.project__heading {
+    font-size: $font-size-jumbo;
+    line-height: 1.3333;
+    margin-bottom: 3rem;
+}
+
+.project__meta-list {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.project__meta-item {
+    width: 37.5%;
+    &:nth-of-type(2) {
+        width: 25%;
+    }
+
+    p {
+        font-size: $font-size-med;
+        margin: 0;
+    }
+}
+
+.project__meta-heading {
+    font-size: 1rem;
+    color: $grey;
+    margin-bottom: 0;
+}
+
+.project__tag-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project__tag {
+    font-size: $font-size-med;
+    margin-right: 0.25rem;
+    
+    &::after {
+        content: ",";
+    }
+
+    &:last-of-type::after {
+        content: "";
+    }
+}
+
+.project__item--image {
+    padding: 5rem;
+
+    img {
+        display: block;
+    }
 }
