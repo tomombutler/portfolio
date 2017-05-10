@@ -3,11 +3,19 @@ body {
     background: $white;
 }
 
+body.inverted {
+    background: $black;
+}
+
+.site-main {
+    padding-bottom: 8rem;
+}
+
 .wrapper {
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
-    padding: 0 3.6rem;
+    padding: 0 7.2rem;
 }
 
 .article-item {
@@ -15,12 +23,30 @@ body {
 }
 
 .section--intro {
-    width: 66.66666667%;
-    margin: 13rem 0 0 8.333333333%;
+    width: 75%;
+    padding: 13rem 0 0;
+    animation: 2s ease fadeinup;
 }
 
 .section--spaced {
     margin-top: 6rem;
+}
+
+@keyframes fadeinup {
+    0% { 
+        opacity: 0;
+        transform: translateY(1rem); 
+    }
+
+    10% { 
+        opacity: 0;
+        transform: translateY(1rem); 
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #body {

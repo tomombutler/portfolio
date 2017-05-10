@@ -17,16 +17,12 @@
         {% do assets.addCss('http://yui.yahooapis.com/pure/0.6.0/pure-min.css', 100) %}
         {% do assets.addCss('theme://css/custom.css', 99) %}
         {% do assets.addCss('theme://css/app.min.css', 98) %}
+        {% do assets.addCss('theme://bower_components/animsition/dist/css/animsition.min.css', 97) %}
     {% endblock %}
     {{ assets.css() }}
 
-    <script src="https://use.typekit.net/wle1nwz.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-    <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
-
     {% block javascripts %}
-        {% do assets.addJs('theme://js/app.min.js', 99) %}
+        {% do assets.addJs('theme://js/app.min.js', 100) %}
     {% endblock %}
     {{ assets.js() }}
 
@@ -35,16 +31,18 @@
 
 <body id="top" class="{{ page.header.body_classes }}">
 
+<div class="animsition">
+
 {% block header %}
     {% include 'partials/header.html.twig' %}
 {% endblock %}
 
 {% block body %}
-    <section id="body">
+    <main class="site-main">
         <div class="wrapper">
         {% block content %}{% endblock %}
         </div>
-    </section>
+    </main>
 {% endblock %}
 
 {% block footer %}
@@ -55,5 +53,6 @@
     {{ assets.js('bottom') }}
 {% endblock %}
 
+</div>
 </body>
 </html>

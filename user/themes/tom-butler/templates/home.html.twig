@@ -5,19 +5,21 @@
 {% block content %}
 <section class="section--intro">
 {% if header.heading %}
-	<p class="paragraph-jumbo">{{ header.heading }}</p>
+	<div class="grid">
+		<div class="grid__item">
+			<p class="paragraph-jumbo">{{ header.heading }}</p>
+		</div>
+	</div>
 {% endif %}
 </section>
 
 <div class="section section--spaced">
-	<div class="grid u-flex-center">
-		<div class="grid grid--projects">
-			{% for child in page.find('/projects').children %}
-			<div class="grid__item grid__item-1-2">
-				{% include 'partials/project_card.html.twig' with {'blog':page, 'page':child} %}
-			</div>
-			{% endfor %}
+	<div class="grid">
+		{% for child in page.find('/projects').children %}
+		<div class="grid__item grid__item-1-2">
+			{% include 'partials/project_card.html.twig' with {'blog':page, 'page':child} %}
 		</div>
+		{% endfor %}
 	</div>
 </div>
 {% endblock %}

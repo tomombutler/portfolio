@@ -5,6 +5,9 @@
     &:hover,
     &:focus {
         .project-card__image {
+            box-shadow: 0 20px 24px 0 rgba(17,17,17,0.25);
+            transform: translateY(-0.25rem);
+            
             &::before {
                 opacity: 1;
                 transition: opacity .25s ease;

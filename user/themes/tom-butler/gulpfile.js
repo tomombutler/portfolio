@@ -60,8 +60,8 @@ var css = {
 var js = {
     'app': {
         'input': [
-            'bower_components/jquery/dist/jquery.min.js',
-            'bower_components/Tweetie/tweetie.min.js',
+            'bower_components/jquery/dist/jquery.js',
+            'bower_components/animsition/dist/js/animsition.js',
             'js/app/*.js',
             'js/app.js'
         ],

@@ -4,48 +4,19 @@
     {{ assets.js('bottom') }}
 {% endblock %}
 
-{% block content %}
-<article class="section hero">
-    {% for file in header.custom_file %}
-    <div class="hero__image">
-        <img src="{{ file.path }}">
-    </div>
-    {% endfor %}
-
-    <div class="pure-g grid-wrapper u-flex-center">
-        <div class="pure-u-2-3 grid-item">
-            <div class="hero__content">
-                {% if header.heading %}
-                <h1>{{ header.heading }}</h1>
-                {% endif %}
-                {% if header.introduction %}
-                <p>{{ header.introduction }}</p>
-                {% endif %}
-            </div>
+{% block content %}    
+<section class="section--intro">
+{% if header.heading %}
+	<div class="grid">
+		<div class="grid__item">
+			<p class="paragraph-jumbo">{{ header.heading }}</p>
+		</div>
+        {% for file in header.custom_file %}
+        <div>
+            <img src="{{ file.path }}">
         </div>
-
-        {% for content_block in header.content_blocks %}
-            {% for file in content_block.single_image_row %}
-            <div class="pure-u-1-1 grid-item article-item">
-                <img src="{{ file.path }}">
-            </div>
-            {% endfor %}
-            {% for file in content_block.double_image_row_01 %}
-            <div class="pure-u-1-2 grid-item article-item"> 
-                <img src="{{ file.path }}">
-            </div>
-            {% endfor %}      
-            {% for file in content_block.double_image_row_02 %}
-            <div class="pure-u-1-2 grid-item article-item">  
-                <img src="{{ file.path }}">    
-            </div>
-            {% endfor %}                    
-            {% if content_block.text_row %}
-            <div class="pure-u-2-3 grid-item article-item">
-                <p>{{ content_block.text_row }}</p>        
-            </div>
-            {% endif %}
         {% endfor %}
-    </div>  
-</article>
+	</div>
+{% endif %}
+</section>
 {% endblock %}

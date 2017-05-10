@@ -1,8 +1,8 @@
 ---
-title: Home
+title: Projects
 heading: 'Tom Butler is a multi-disciplinary designer, developer and creative currently working in London, United Kingdom'
 body_classes: modular
-menu: Home
+menu: Projects
 content:
     items: '@self.modular'
     order:

@@ -1,16 +1,23 @@
-// mapbox js
-// mapboxgl.accessToken = 'pk.eyJ1Ijoic2hlZGNvbGxlY3RpdmUiLCJhIjoiY2l2ZHhkb2p3MDA0dDJvb3cxcTQzejVpciJ9.UU1ZjmINIzrmLrquetNrjg';
-// var map = new mapboxgl.Map({
-//     container: 'map',
-//     style: 'mapbox://styles/shedcollective/cj1ywavy500162sp7tnhb0szl'
-// });
-
-// tweets
-$('.card--tweet').twittie({
-    username: 'shedcollective',
-    dateFormat: '%b. %d, %Y',
-    template: '{{tweet}} <div class="date">{{date}}</div> <a href="{{url}}" target="_blank">Details</a>',
-    count: 1,
-    hideReplies: true,
-    apiPath: '/user/themes/welsh-homestead/bower_components/Tweetie/api/tweet.php'
+$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 800,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    loading: true,
+    loadingParentElement: 'body',
+    loadingClass: 'animsition-loading',
+    loadingInner: '<img src="/user/themes/tom-butler/images/logo.svg">', // e.g '<img src="loading.svg" />'
+    timeout: true,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
 });

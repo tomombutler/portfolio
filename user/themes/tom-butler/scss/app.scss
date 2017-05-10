@@ -8,8 +8,6 @@
 @import "app/component/links.scss";
 @import "app/component/blog.scss";
 @import "app/component/grid.scss";
-@import "app/component/services.scss";
-@import "app/component/hero.scss";
 @import "app/component/logo.scss";
 @import "app/component/project.scss";
 
@@ -18,5 +16,4 @@
 @import "app/structure/layout.scss";
 @import "app/structure/nav.scss";
 
-// Vendor Overrides
-// ================
+@import "app/structure/transitions.scss";
