@@ -5,11 +5,12 @@
 {% endblock %}
 
 {% block content %}    
-<section class="section--intro">
+<img class="profile-image" src="../user/pages/images/image-profile-tb.jpg" alt="">
 {% if header.heading %}
+<section class="section--intro">
 	<div class="grid">
 		<div class="grid__item">
-			<p class="paragraph-jumbo">{{ header.heading }}</p>
+			<p class="paragraph-jumbo paragraph-jumbo--profile">{{ header.heading }}</p>
 		</div>
         {% for file in header.custom_file %}
         <div>

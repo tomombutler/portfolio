@@ -5,6 +5,15 @@ body {
 
 body.inverted {
     background: $black;
+    color: $white;
+
+    p {
+        color: $white;
+    }
+
+    .paragraph-jumbo {
+        color: $white;
+    }
 }
 
 .site-main {
@@ -12,6 +21,7 @@ body.inverted {
 }
 
 .wrapper {
+    position: relative;
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
@@ -23,6 +33,7 @@ body.inverted {
 }
 
 .section--intro {
+    position: relative;
     width: 75%;
     padding: 13rem 0 0;
     animation: 2s ease fadeinup;

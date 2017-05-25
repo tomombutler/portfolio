@@ -85,8 +85,8 @@
 
 // project page
 .project__intro {
-    width: 66.66666667%;
-    margin: 13rem 0 0 8.333333333%;
+    width: 75%;
+    padding: 13rem 0 0;
 }
 
 .project__heading {
@@ -142,9 +142,18 @@
 }
 
 .project__item--image {
+    position: relative;
     padding: 5rem;
-
     img {
         display: block;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: -100%;
+        background: inherit;
     }
 }
