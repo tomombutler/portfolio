@@ -5,21 +5,11 @@
     padding: 5rem 0px;
     height: 18rem;
     background: $black;
-
-    p {
-        line-height: 1;
-        color: $grey-dark;
-        font-size: $font-size-large;
-        margin: 0 0 0.5rem;
-    }
 }
 
     .site-footer__link {
         font-size: $font-size-extra-large;
         color: $white;
-        &::before {
-            content: "— ";
-        }
     }
 
     .site-footer__social-list {

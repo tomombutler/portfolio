@@ -5,18 +5,15 @@
 {% endblock %}
 
 {% block content %}    
-<img class="profile-image" src="../user/pages/images/image-profile-tb.jpg" alt="">
-{% if header.heading %}
+{% for file in header.custom_file %}
+<img class="profile-image" src="{{ file.path }}" alt="">
+{% endfor %}
+{% if header.introduction %}
 <section class="section--intro">
 	<div class="grid">
-		<div class="grid__item">
-			<p class="paragraph-jumbo paragraph-jumbo--profile">{{ header.heading }}</p>
+		<div class="grid__item grid__item-3-4">
+			<p class="paragraph-jumbo paragraph-jumbo--profile">{{ header.introduction }}</p>
 		</div>
-        {% for file in header.custom_file %}
-        <div>
-            <img src="{{ file.path }}">
-        </div>
-        {% endfor %}
 	</div>
 {% endif %}
 </section>

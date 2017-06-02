@@ -35,11 +35,6 @@ form:
               filesize: 5
               accept:
                 - image/*
-              
-            header.heading:
-              type: text
-              style: vertical
-              label: Heading
 
             header.introduction:
               type: markdown

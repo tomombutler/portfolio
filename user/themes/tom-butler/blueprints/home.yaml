@@ -14,10 +14,11 @@ form:
           title: Home
 
           fields:
-            header.heading:
-              type: text
-              style: vertical
-              label: Heading
+            header.introduction:
+              type: markdown
+              label: Introduction
+              validate:
+                type: textarea
 
             content: 
               type: ignore

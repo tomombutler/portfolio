@@ -13,6 +13,22 @@
     padding: 0 1rem;
 }
 
+.grid__item-1-12 {
+    width: calc(100%/12);
+}
+
+.grid__item-2-6 {
+    width: calc(100%/12);
+}
+
+.grid__item-3-12 {
+    width: calc(100%/12);
+}
+
 .grid__item-1-2 {
     width: 50%;
+}
+
+.grid__item-3-4 {
+    width: 75%;
 }
