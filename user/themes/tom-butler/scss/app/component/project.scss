@@ -63,7 +63,7 @@
     .project-card__tag-list {
         display: flex;
         list-style: none;
-        color: $grey;
+        color: $grey-light;
         padding: 0;
         margin: 0;
         font-family: $font-family-base;
@@ -117,7 +117,7 @@
 
 .project__meta-heading {
     font-size: 1rem;
-    color: $grey;
+    color: $grey-light;
     margin-bottom: 0;
 }
 

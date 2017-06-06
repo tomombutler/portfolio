@@ -7,12 +7,33 @@ body.inverted {
     background: $black;
     color: $white;
 
+    .site-main {
+        padding-bottom: 0;
+    }
+
+    .site-nav__link {
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+    }
+
     p {
         color: $white;
     }
 
+    .section--bordered p {
+        padding: 0;
+        margin: 0;
+    }
+
     .paragraph-jumbo {
         color: $white;
+
+        a {
+            position: relative;
+            color: $white;
+        }
     }
 }
 
@@ -34,12 +55,22 @@ body.inverted {
 
 .section--intro {
     position: relative;
-    padding: 13rem 0 0;
+    padding: 14rem 0 0;
     animation: 2s ease fadeinup;
 }
 
 .section--spaced {
     margin-top: 6rem;
+}
+
+.section--bordered {
+    padding: 4rem 0;
+    border-top: 1px solid $grey-dark;
+    
+    &:last-of-type {
+        border-bottom: 1px solid $grey-dark;
+    }
+
 }
 
 @keyframes fadeinup {
