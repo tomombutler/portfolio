@@ -1,8 +1,9 @@
 .grid {
     display: flex;
-    flex-direction: row-wrap;
+    flex-flow: row wrap;
+    flex: 1 0 auto;
     margin: 0 -1rem;
-    width: 100%;
+    font-family: $font-family-base;
 }
 
 .grid--projects {
@@ -11,6 +12,10 @@
 
 .grid__item {
     padding: 0 1rem;
+}
+
+.grid__item-1 {
+    width: 100%;
 }
 
 .grid__item-1-12 {
@@ -31,4 +36,14 @@
 
 .grid__item-3-4 {
     width: 75%;
+}
+
+.grid__item-1-2--flush {
+    width: calc(50% + 4rem);
+    margin-right: -4rem;
+}
+
+// pure override
+.pure-g [class*=pure-u] {
+    font-family: $font-family-base;
 }

@@ -9,7 +9,12 @@
     height: 4.8rem;
     width: 100vw;
     font-family: $font-family-base;
+    transform: translateY(0);
     z-index: 1;
+}
+
+.head-up {
+    transform: translateY(-100%);
 }
 
 .site-header .wrapper {

@@ -3,25 +3,22 @@
 {% set collection = page.collection() %}
 
 {% block content %}
-<section class="section--intro">
-{% if header.introduction %}
+{# <section class="section--intro"> #}
 	<div class="grid">
-		<div class="grid__item grid__item-3-4">
+		{% if header.heading %}
+		<div class="grid__item grid__item-1-2">
+			<h1>{{ header.heading }}</h1>
+			<p>{{ page.title }}</p>
 			<p class="paragraph-jumbo">{{ header.introduction }}</p>
 		</div>
-	</div>
-{% endif %}
-</section>
-
-<div class="section section--spaced">
-	<div class="grid">
-		{% for child in page.find('/projects').children %}
-		<div class="grid__item grid__item-1-2">
+		{% endif %}
+		<div class="grid__item grid__item-1-2 grid__item-1-2--flush project-grid">
+			{% for child in page.find('/projects').children %}
 			{% include 'partials/project_card.html.twig' with {'blog':page, 'page':child} %}
+			{% endfor %}
 		</div>
-		{% endfor %}
 	</div>
-</div>
+{# </section> #}
 {% endblock %}
 
 {% endembed %}
